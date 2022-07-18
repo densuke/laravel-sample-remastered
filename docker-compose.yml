@@ -16,3 +16,10 @@ services:
         MARIADB_DATABASE: sample
         MARIADB_USER: memoadmin
         MARIADB_PASSWORD: admin
+
+  phpmyadmin:
+    image: phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+    ports:
+      - 8887:80

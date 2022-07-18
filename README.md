@@ -31,4 +31,4 @@ PS> docker compose exec frontend composer install
     3. 環境構築(Laravel)〜ちょっとコードを変更してみる
     4. 〜モデル(の作成)
         ※ ここ以降を試すときはmigrateの実行を忘れずに!(DBのインスタンスはリポジトリに入ってません)
-
+    5. phpmyadminの導入
