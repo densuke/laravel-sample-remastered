@@ -8,3 +8,11 @@ services:
     ports:
       - 8888:80
     command: php artisan serve --port 80 --host 0.0.0.0
+
+  backend:
+      image: mariadb
+      environment:
+        MARIADB_RANDOM_ROOT_PASSWORD: 1
+        MARIADB_DATABASE: sample
+        MARIADB_USER: memoadmin
+        MARIADB_PASSWORD: admin
