@@ -37,5 +37,6 @@ PS> docker compose exec frontend composer install
 2. メモ(12)
     8. 一覧表示の実装〜受け取った側がどう見えるか
     9. 詳細画面を実装する〜ルーティングに名前を付けよう
+    10. 一覧→詳細への遷移(戻りも)
 
 

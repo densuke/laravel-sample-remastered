@@ -20,4 +20,4 @@ Route::get('/', function () {
 });
 
 Route::get('/memos', [MemosController::class, 'index'])->name('memo.list');
-Route::get('/memo/{id}', [MemosController::class, 'show']);
+Route::get('/memo/{id}', [MemosController::class, 'show'])->name('memo.show');
