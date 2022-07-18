@@ -45,9 +45,10 @@ class MemosController extends Controller
      * @param  \App\Models\memos  $memos
      * @return \Illuminate\Http\Response
      */
-    public function show(memos $memos)
+    public function show(Request $request, $id, memos $memos)
     {
-        //
+        $memo = memos::find($id);
+        return view('show', ['memo' => $memo]);
     }
 
     /**

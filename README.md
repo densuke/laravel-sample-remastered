@@ -34,6 +34,8 @@ PS> docker compose exec frontend composer install
     5. phpmyadminの導入
     6. メモ一覧の取得・表示
     7. コントローラーをルーティングに登録(12冒頭含む)
+2. メモ(12)
     8. 一覧表示の実装〜受け取った側がどう見えるか
+    9. 詳細画面を実装する〜ルーティングに名前を付けよう
 
 

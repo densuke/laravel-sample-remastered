@@ -19,4 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/memos', [MemosController::class, 'index']);
+Route::get('/memos', [MemosController::class, 'index'])->name('memo.list');
+Route::get('/memo/{id}', [MemosController::class, 'show']);
