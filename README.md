@@ -43,5 +43,7 @@ PS> docker compose exec frontend composer install
     13. 〜ストレージ
 3. メモ(13)
     14. PHPの拡張機能とcomposer
+    15. newのルーティングを用意しよう〜処理後のリダイレクト
+
 
 

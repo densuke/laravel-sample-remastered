@@ -25,7 +25,7 @@ class MemosController extends Controller
      */
     public function create()
     {
-        //
+        return view('new');
     }
 
     /**
@@ -36,7 +36,14 @@ class MemosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if($request->filled('text')) {
+            $text = $request->input('text');
+            $memo = new memos(); // 新規メモのインスタンスを生成
+            $memo->text = $text; // メモ内容をセットして
+            $memo->save();  // 保存すればレコードとして記録
+        }
+        // メモの一覧に移動させる(ルーティング上で指定する)
+        return redirect(route('memo.list'));
     }
 
     /**
