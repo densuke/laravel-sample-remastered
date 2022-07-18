@@ -41,5 +41,7 @@ PS> docker compose exec frontend composer install
     11. ページ遷移と見た目の問題
     12. 〜layout
     13. 〜ストレージ
+3. メモ(13)
+    14. PHPの拡張機能とcomposer
 
 
