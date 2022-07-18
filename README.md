@@ -39,5 +39,7 @@ PS> docker compose exec frontend composer install
     9. 詳細画面を実装する〜ルーティングに名前を付けよう
     10. 一覧〜詳細への遷移(戻りも)
     11. ページ遷移と見た目の問題
+    12. 〜layout
+    13. 〜ストレージ
 
 
