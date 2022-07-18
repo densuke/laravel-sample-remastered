@@ -8,5 +8,11 @@
 </head>
 <body>
 サンプルです。
+<ul>
+    @foreach($message as $memo)
+    <li>{{ $memo['text']}}</li>
+    @endforeach
+</ul>
+
 </body>
 </html>

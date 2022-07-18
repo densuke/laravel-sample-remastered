@@ -14,7 +14,8 @@ class MemosController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $data = memos::all();  # tinkerで試したように、これで抜きだせる
+        return view('index', ['message' => $data]); # 連想配列で値を渡す
     }
 
     /**
