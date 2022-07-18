@@ -1,5 +1,9 @@
 version: '3'
 
+volumes:
+  db:
+    driver: local
+
 services:
   frontend:
     build: laravel
@@ -16,6 +20,8 @@ services:
         MARIADB_DATABASE: sample
         MARIADB_USER: memoadmin
         MARIADB_PASSWORD: admin
+      volumes:
+      - db:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin
