@@ -4,7 +4,7 @@ services:
   frontend:
     build: laravel
     volumes:
-      - ./src:/var/www/html
+      - ./src/sample:/var/www/html
     ports:
       - 8888:80
     command: sleep infinity
