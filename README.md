@@ -5,7 +5,7 @@
 
 # 使い方
 
-メモ(10)〜(13)の内容を追いかけたい人は、初期状態からの推移を見ることをお勧めします。
+メモ(11)〜(13)の内容を追いかけたい人は、初期状態からの推移を見ることをお勧めします。
 
 PS> docker compose build
 PS> docker compose up -d
@@ -25,7 +25,8 @@ PS> docker compose exec frontend composer install
 
 # ざっくり時系列
 
-1. メモ(10)
+1. メモ(11)
     1. 初期のdocker-compose環境
     2. Laravelプロジェクトの作成
+    3. 環境構築(Laravel)〜ちょっとコードを変更してみる
 

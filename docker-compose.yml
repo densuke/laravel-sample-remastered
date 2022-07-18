@@ -7,4 +7,4 @@ services:
       - ./src/sample:/var/www/html
     ports:
       - 8888:80
-    command: sleep infinity
+    command: php artisan serve --port 80 --host 0.0.0.0
