@@ -87,8 +87,11 @@ class MemosController extends Controller
      * @param  \App\Models\memos  $memos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(memos $memos)
+    public function destroy(Request $request, $id,  memos $memos)
     {
-        //
+        $memo = memos::find($id);
+        $memo->delete();
+
+        return redirect(route('memo.list')); // 一覧にリダイレクト
     }
 }

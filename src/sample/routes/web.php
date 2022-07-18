@@ -26,3 +26,4 @@ Route::get('/memo/{id}', [MemosController::class, 'show'])->name('memo.show');
 # ↓ ここに書くとエラーになる(前の行↑で補足されてしまう問題)
 #Route::get('/memo/new',[MemosController::class, 'create'])->name('memo.new'); # ※
 Route::post('/memo',[MemosController::class, 'store'])->name('memo.store');
+Route::get('/memo/{id}/delete', [MemosController::class, 'destroy'])->name('memo.delete');

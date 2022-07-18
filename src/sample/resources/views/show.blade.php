@@ -8,6 +8,8 @@
 </head>
 <body>
 {{ $memo->text }}
+<br>
+<a href="{{ route('memo.delete', ['id' => $memo->id]) }}">削除</a>
 <a href={{ route('memo.list')}}>一覧に戻る</a>
 </body>
 </html>
