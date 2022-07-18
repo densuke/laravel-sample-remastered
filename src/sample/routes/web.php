@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Controllers\MemosController;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/memos', [MemosController::class, 'index']);

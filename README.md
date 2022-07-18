@@ -32,3 +32,6 @@ PS> docker compose exec frontend composer install
     4. 〜モデル(の作成)
         ※ ここ以降を試すときはmigrateの実行を忘れずに!(DBのインスタンスはリポジトリに入ってません)
     5. phpmyadminの導入
+    6. メモ一覧の取得・表示
+    7. コントローラーをルーティングに登録(12冒頭含む)
+
