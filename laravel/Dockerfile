@@ -6,3 +6,5 @@ RUN --mount=type=tmpfs,destination=/var/cache/apt \
 COPY --from=composer/composer /usr/bin/composer /usr/local/bin/composer
 RUN docker-php-ext-install pdo_mysql pdo
 WORKDIR /var/www/html
+COPY sample /var/www/html
+RUN composer install

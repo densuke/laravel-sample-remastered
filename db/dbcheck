@@ -1,0 +1,7 @@
+#!/bin/bash
+
+mysqladmin ping \
+    -u ${MARIADB_USER} \
+    --password=${MARIADB_PASSWORD} \
+    -h backend
+exit $?

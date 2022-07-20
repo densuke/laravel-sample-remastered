@@ -6,12 +6,18 @@ volumes:
 
 services:
   frontend:
-    build: laravel
-    volumes:
-      - ./src/sample:/var/www/html
+    depends_on:
+      backend:
+        condition: service_healthy
+    #build: laravel
+    image: densukest/hello-laravel
+    # volumes:
+    #   - ./src/sample:/var/www/html
     ports:
       - 8888:80
-    command: php artisan serve --port 80 --host 0.0.0.0
+    # command: php artisan serve --port 80 --host 0.0.0.0
+    command: |
+      sh -c "until php artisan migrate;do sleep 1; done; php artisan serve --port 80 --host 0.0.0.0"
 
   backend:
       image: mariadb
@@ -22,6 +28,13 @@ services:
         MARIADB_PASSWORD: admin
       volumes:
       - db:/var/lib/mysql
+      healthcheck:
+        test: "mysqladmin ping -h backend -u memoadmin --password=admin"
+        timeout: 2s
+        retries: 5
+        start_period: 5s
+        interval: 2s
+
 
   phpmyadmin:
     image: phpmyadmin
